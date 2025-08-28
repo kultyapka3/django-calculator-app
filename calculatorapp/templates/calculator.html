@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>CalculatorApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main.css' %}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+</head>
+<body>
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+
+    <div class="container-wrapper">
+        <div class="calculator-container">
+            <textarea id="resultArea" readonly rows="1" cols="10"></textarea>
+
+            <div class="btn-grid">
+                <button id="openParen" class="btn btn-default">(</button>
+                <button id="closeParen" class="btn btn-default">)</button>
+                <button id="clrTxt" class="btn btn-danger">C</button>
+                <button id="backspace" class="btn btn-default">⌫</button>
+
+                <button id="sqrt" class="btn btn-default">√</button>
+                <button id="square" class="btn btn-default">x²</button>
+                <button id="percent" class="btn btn-default">%</button>
+                <button id="decp" class="btn btn-default">.</button>
+
+                <button id="num7" class="btn btn-default">7</button>
+                <button id="num8" class="btn btn-default">8</button>
+                <button id="num9" class="btn btn-default">9</button>
+                <button id="op1" class="btn btn-primary">−</button>
+
+                <button id="num4" class="btn btn-default">4</button>
+                <button id="num5" class="btn btn-default">5</button>
+                <button id="num6" class="btn btn-default">6</button>
+                <button id="op0" class="btn btn-primary">+</button>
+
+                <button id="num1" class="btn btn-default">1</button>
+                <button id="num2" class="btn btn-default">2</button>
+                <button id="num3" class="btn btn-default">3</button>
+                <button id="op2" class="btn btn-primary">×</button>
+
+                <button id="op3" class="btn btn-primary">÷</button>
+                <button id="num0" class="btn btn-default">0</button>
+                <button id="eqBtn" class="btn btn-success eq-btn">=</button>
+            </div>
+        </div>
+
+        <button id="historyBtn" class="history-btn">История</button>
+    </div>
+
+    <div id="historyPanel" class="history-panel">
+        <h4>История вычислений</h4>
+        <ul id="historyList"></ul>
+        <button id="clearHistory" class="btn btn-warning">Очистить</button>
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/calculations.js' %}"></script>
+</body>
+</html>
