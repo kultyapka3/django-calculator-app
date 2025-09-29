@@ -4,6 +4,12 @@ A modern, interactive web calculator built with **Django** (backend) and **vanil
 This app supports basic arithmetic, advanced operations (like square and square root), keyboard input, history 
 tracking, and a toggleable dark/light theme — all without page reloads.
 
+### Calculator Dark Page
+![Main](screenshots/calc_dark_page.png)
+
+### Calculator Light Page
+![Vote](screenshots/calc_light_page.png)
+
 ---
 
 ## Features
